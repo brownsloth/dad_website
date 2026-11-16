@@ -1,0 +1,24 @@
+[[redirects]]
+  from = "http://brijkishoresharma.com/*"
+  to   = "https://brijkishoresharma.com/:splat"
+  status = 301
+  force  = true
+
+[[redirects]]
+  from = "http://www.brijkishoresharma.com/*"
+  to   = "https://brijkishoresharma.com/:splat"
+  status = 301
+  force  = true
+
+[[redirects]]
+  from = "https://www.brijkishoresharma.com/*"
+  to   = "https://brijkishoresharma.com/:splat"
+  status = 301
+  force  = true
+
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Frame-Options        = "DENY"
+    X-Content-Type-Options = "nosniff"
+    Referrer-Policy        = "strict-origin-when-cross-origin"
