@@ -58,7 +58,7 @@ nav .nav-cta{border-color:rgba(255,255,255,.5);color:#fff}
 nav .nav-cta:hover{background:#fff;color:var(--sage-mid)}
 nav .hamburger{color:#fff}
 /* Scrolled past hero: cream bg, dark text */
-nav.scrolled .nav-inner{background:var(--cream);border-color:var(--rule)}
+nav.scrolled .nav-inner{background:var(--cream);border-color:var(--rule);border-radius:2rem;margin-top:.6rem;padding:0 1.5rem;box-shadow:0 4px 24px rgba(0,0,0,.08)}
 nav.scrolled .nav-name{color:var(--ink)}
 nav.scrolled .nav-name span{color:var(--gold)}
 nav.scrolled .nav-links a{color:var(--ink60)}
@@ -448,8 +448,7 @@ footer{background:var(--ink);color:rgba(255,255,255,.45);padding:2.5rem;font-siz
 const nav=document.getElementById('nav');
 const hero=document.getElementById('top');
 function updateNav(){
-  const heroBottom=hero?hero.offsetHeight-10:400;
-  nav.classList.toggle('scrolled',window.scrollY>heroBottom);
+  nav.classList.toggle('scrolled',window.scrollY>80);
 }
 window.addEventListener('scroll',updateNav,{passive:true});
 updateNav();
